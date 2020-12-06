@@ -18,19 +18,20 @@ body {
 
 
 .actual_temp{
-  margin: 0px;
-  padding: 0px;
+  padding-top: 0px;
   text-align: center;
 }
 
 
 #TEMPERATURE {
+  font-size: 150px;
   font-family: "TheBoldFont";
   color: white;
 }
 
 
 #actual_temp {
+  font-size: 150px;
   font-family: "CaviarDreams";
   text-decoration: none;
   color: white;
