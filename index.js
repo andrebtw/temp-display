@@ -9,11 +9,17 @@ var i = 0;                  //  set your counter to 1
 function actual_temp() {         //  create a loop function
   setTimeout(function() {   //  call a 3s setTimeout when the loop is called
     try {
-        var temps_historic=[]
+        var obj = {
+          temps_historic: []
+        };
         var temps = fs.readFileSync('temps.txt', 'utf8');
         console.log(temps);
         document.getElementById("actual_temp").innerHTML = temps;
-        temps_historic.push(temps)
+        obj.temps_historic.push({temperature_historic: temps});
+        var json = JSON.stringify(obj);
+        fs.writeFile('temps_historic.json', json, 'utf8', callback);
+
+
     } catch(e) {
         console.log('Error:', e.stack);
     }
