@@ -9,6 +9,7 @@ function myLoop() {         //  create a loop function
         var temps_historic=[]
         var temps = fs.readFileSync('temps.txt', 'utf8');
         console.log(temps);
+        temps_historic.push(temps)
     } catch(e) {
         console.log('Error:', e.stack);
     }
