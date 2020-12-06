@@ -12,3 +12,14 @@ body {
   text-decoration: none;
   color: white;
 }
+
+
+.min_temp{
+  text-align: left;
+}
+
+
+#min_temp{
+  text-decoration: none;
+  color: blue;
+}
