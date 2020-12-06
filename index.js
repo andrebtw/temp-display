@@ -42,7 +42,7 @@ function max_temp() {         //  create a loop function
         };
         var max_temp = Array.max(temps_var);
         console.log(max_temp);
-        document.getElementById("min_temp").innerHTML = max_temp;
+        document.getElementById("max_temp").innerHTML = max_temp;
     } catch(e) {
         console.log('Error:', e.stack);
     }
