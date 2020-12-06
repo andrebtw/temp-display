@@ -1,6 +1,9 @@
 var fs = require('fs');
 
 
+
+/*DISPLAYING ACTUAL TEMP*/
+
 var i = 0;                  //  set your counter to 1
 
 function actual_temp() {         //  create a loop function
@@ -20,5 +23,11 @@ function actual_temp() {         //  create a loop function
     }                       //  ..  setTimeout()
   }, 1000)
 }
-
 actual_temp();                   //  start the loop
+
+
+
+/*DISPLAYING MIN */
+
+
+/*DISPLAYING MAX TEMP*/
