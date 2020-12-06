@@ -17,9 +17,7 @@ function actual_temp() {         //  create a loop function
         document.getElementById("actual_temp").innerHTML = temps;
         obj.temps_historic.push({temperature_historic: temps});
         var json = JSON.stringify(obj);
-        fs.writeFile('temps_historic.json', json, 'utf8', callback);
-
-
+        fs.writeFileSync('temps_historic.json', json);
     } catch(e) {
         console.log('Error:', e.stack);
     }
