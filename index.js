@@ -14,8 +14,8 @@ function display_temp() {         //  create a loop function
         console.log('Error:', e.stack);
     }
     i++;                    //  increment the counter
-    if (i < 9999999999999999) {           //  if the counter < 10, call the loop function
-      myLoop();             //  ..  again which will trigger another
+    if (i < 99999999999999999999) {           //  if the counter < 10, call the loop function
+      display_temp();             //  ..  again which will trigger another
     }                       //  ..  setTimeout()
   }, 1000)
 }
