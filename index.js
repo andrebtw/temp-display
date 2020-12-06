@@ -25,7 +25,7 @@ function min_temp() {         //  create a loop function
     if (x < 99999999999999999999) {           //  if the counter < 10, call the loop function
       actual_temp();             //  ..  again which will trigger another
     }                       //  ..  setTimeout()
-  }, 1000)
+  }, 2500)
 }
 
 
@@ -50,7 +50,7 @@ function max_temp() {         //  create a loop function
     if (x < 99999999999999999999) {           //  if the counter < 10, call the loop function
       actual_temp();             //  ..  again which will trigger another
     }                       //  ..  setTimeout()
-  }, 1000)
+  }, 2500)
 }
 
 
@@ -86,6 +86,6 @@ function actual_temp() {         //  create a loop function
     if (i < 99999999999999999999) {           //  if the counter < 10, call the loop function
       actual_temp();             //  ..  again which will trigger another
     }                       //  ..  setTimeout()
-  }, 1000)
+  }, 2500)
 }
 actual_temp();                   //  start the loop
