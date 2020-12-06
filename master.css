@@ -26,12 +26,13 @@ body {
 
 
 
-.min_max{
+.max_temp{
   text-align: right;
 }
 
 
-#min_max{
+#max_temp{
   text-decoration: none;
-  color: blue;
+  color: red;
+
 }
