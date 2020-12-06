@@ -1,7 +1,6 @@
 var fs = require('fs');
 var temps_historic = require('./temps_historic.json');
 
-var jsonstr = '"temps":[{"temp_number":1,"temp":20}]'
 
 /*DISPLAYING ACTUAL TEMP*/
 
@@ -13,6 +12,7 @@ function actual_temp() {         //  create a loop function
     try {
         var temps = fs.readFileSync('temps.txt', 'utf8');
         console.log(temps);
+        var jsonstr = '';
         document.getElementById("actual_temp").innerHTML = temps;
         var obj = JSON.parse(jsonstr);
         obj['temps'].push({"temp_number":temp_times,"temp":temps});
