@@ -1,5 +1,5 @@
-var fs = require('fs');
-var temps_historic = require('./temps_historic.json');
+const fs = require('fs');
+const temps_historic = require('./temps_historic.json');
 
 
 /*DISPLAYING ACTUAL TEMP*/
@@ -10,13 +10,22 @@ var temp_times=0                //  set your counter to 1
 function actual_temp() {         //  create a loop function
   setTimeout(function() {   //  call a 3s setTimeout when the loop is called
     try {
+        fs.readFile('./temps_historic.json', 'utf8', (err, obj) => {
+          if (err) {
+              console.log("Error reading file from disk:", err)
+              return
+          }
+          try {
+              var json_temps = JSON.parse(obj)
+              console.log('Error parsing JSON string:', err)
+          }
+        })
+
         var temps = fs.readFileSync('temps.txt', 'utf8');
         console.log(temps);
-        var jsonstr = '';
         document.getElementById("actual_temp").innerHTML = temps;
-        var obj = JSON.parse(jsonstr);
-        obj['temps'].push({"temp_number":temp_times,"temp":temps});
-        var json = JSON.stringify(obj);
+        json_temps['temps'].push({temps});
+        var json = JSON.stringify(json_temps);
         fs.writeFileSync('temps_historic.json', json);
     } catch(e) {
         console.log('Error:', e.stack);
@@ -34,6 +43,7 @@ actual_temp();                   //  start the loop
 
 /*DISPLAYING MIN */
 
+/*
 var x = 0;                  //  set your counter to 1
 
 function min_temp() {         //  create a loop function
@@ -56,5 +66,5 @@ function min_temp() {         //  create a loop function
 }
 min_temp();
 
-
+*/
 /*DISPLAYING MAX TEMP*/
