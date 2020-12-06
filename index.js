@@ -29,5 +29,23 @@ actual_temp();                   //  start the loop
 
 /*DISPLAYING MIN */
 
+var x = 0;                  //  set your counter to 1
+
+function min_temp() {         //  create a loop function
+  setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+    try {
+        console.log(min_temp);
+        document.getElementById("min_temp").innerHTML = min_temp;
+    } catch(e) {
+        console.log('Error:', e.stack);
+    }
+    x++;                    //  increment the counter
+    if (x < 99999999999999999999) {           //  if the counter < 10, call the loop function
+      actual_temp();             //  ..  again which will trigger another
+    }                       //  ..  setTimeout()
+  }, 1000)
+}
+min_temp();
+
 
 /*DISPLAYING MAX TEMP*/
