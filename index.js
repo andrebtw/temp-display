@@ -5,8 +5,6 @@ let temps_var = [];
 
 
 
-
-
 /*DISPLAYING MIN */
 
 var x = 0;                  //  set your counter to 1
@@ -31,13 +29,7 @@ function min_temp() {         //  create a loop function
 }
 
 
-
-
-
-
 /*DISPLAYING MAX TEMP*/
-
-
 
 
 
