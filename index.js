@@ -15,7 +15,7 @@ function actual_temp() {         //  create a loop function
         var temps = fs.readFileSync('temps.txt', 'utf8');
         console.log(temps);
         document.getElementById("actual_temp").innerHTML = temps;
-        obj.temps_historic.push({temperature_historic: temps});
+        obj.temps_historic.push({temps});
         var json = JSON.stringify(obj);
         fs.writeFileSync('temps_historic.json', json);
     } catch(e) {
