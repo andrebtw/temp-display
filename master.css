@@ -11,10 +11,28 @@
 }
 
 
+
+
+/*MAIN PAGE*/
 body {
   margin:0px;
   background-color: grey;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*TEMPERATURE*/
 
 
 .actual_temp{
@@ -39,6 +57,21 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*MIN TEMPERATURE*/
+
+
+
 .min_temp{
   margin: 0px;
   padding: 0px;
@@ -52,6 +85,23 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MAX TEMPERATURE*/
 
 .max_temp{
   margin: 0px;
