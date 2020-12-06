@@ -6,6 +6,7 @@ var i = 0;                  //  set your counter to 1
 function myLoop() {         //  create a loop function
   setTimeout(function() {   //  call a 3s setTimeout when the loop is called
     try {
+        var temps_historic=[]
         var temps = fs.readFileSync('temps.txt', 'utf8');
         console.log(temps);
     } catch(e) {
