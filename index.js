@@ -6,7 +6,7 @@ let temps_var = [];
 
 /*DISPLAYING MIN */
 
-var x = 0;                  //  set your counter to 1
+var x = 0;                  //  set  counter to 1
 
 function min_temp() {         //  create a loop function
     try {
@@ -45,7 +45,7 @@ function max_temp() {         //  create a loop function
 
 /*DISPLAYING ACTUAL TEMP*/
 
-var i = 0;                  //  set your counter to 1
+var i = 0;                  //  set  counter to 1
 
 function actual_temp() {         //  create a loop function
   setTimeout(function() {   //  call a 3s setTimeout when the loop is called
