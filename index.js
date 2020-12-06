@@ -2,8 +2,11 @@ var fs = require('fs');
 let temps_var = [];
 
 
+
+
 /*DISPLAYING MIN */
 
+var x = 0;                  //  set your counter to 1
 
 function min_temp() {         //  create a loop function
     try {
@@ -15,14 +18,14 @@ function min_temp() {         //  create a loop function
         document.getElementById("min_temp").innerHTML = min_temp;
     } catch(e) {
         console.log('Error:', e.stack);
-    }
-    x++;                    //  increment the counter
-    if (x < 99999999999999999999) {           //  if the counter < 10, call the loop function
-      actual_temp();             //  ..  again which will trigger another
-    }
+    }                     //  ..  setTimeout()
 }
 
+
 /*DISPLAYING MAX TEMP*/
+
+
+var z = 0;                  //  set your counter to 1
 
 function max_temp() {         //  create a loop function
     try {
@@ -34,8 +37,10 @@ function max_temp() {         //  create a loop function
         document.getElementById("max_temp").innerHTML = max_temp;
     } catch(e) {
         console.log('Error:', e.stack);
-    }
+    }                   //  ..  setTimeout()
 }
+
+
 
 
 /*DISPLAYING ACTUAL TEMP*/
@@ -59,6 +64,6 @@ function actual_temp() {         //  create a loop function
     if (i < 99999999999999999999) {           //  if the counter < 10, call the loop function
       actual_temp();             //  ..  again which will trigger another
     }                       //  ..  setTimeout()
-
+  }, 2500)
 }
 actual_temp();                   //  start the loop
