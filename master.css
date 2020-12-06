@@ -5,13 +5,10 @@
  src: url("CaviarDreams.ttf") format("ttf");
 }
 
-
-
-
-
-
-
-
+@font-face {
+ font-family: "TheBoldFont";
+ src: url("theboldfont.ttf") format("ttf");
+}
 
 
 
