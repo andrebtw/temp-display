@@ -1,8 +1,14 @@
 body {
   margin:0px;
+  background-color: grey;
 }
 
 
 .actual_temp{
   text-align: center;
+}
+
+#actual_temp {
+  text-decoration: none;
+  color: white;
 }
