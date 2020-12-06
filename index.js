@@ -3,7 +3,7 @@ var fs = require('fs');
 
 var i = 0;                  //  set your counter to 1
 
-function myLoop() {         //  create a loop function
+function display_temp() {         //  create a loop function
   setTimeout(function() {   //  call a 3s setTimeout when the loop is called
     try {
         var temps_historic=[]
@@ -20,4 +20,4 @@ function myLoop() {         //  create a loop function
   }, 1000)
 }
 
-myLoop();                   //  start the loop
+display_temp();                   //  start the loop
