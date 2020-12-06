@@ -5,6 +5,8 @@ body {
 
 
 .actual_temp{
+  margin: 0px;
+  padding: 0px;
   text-align: center;
 }
 
@@ -15,6 +17,8 @@ body {
 
 
 .min_temp{
+  margin: 0px;
+  padding: 0px;
   text-align: left;
 }
 
@@ -27,6 +31,8 @@ body {
 
 
 .max_temp{
+  margin: 0px;
+  padding: 0px;
   text-align: right;
 }
 
