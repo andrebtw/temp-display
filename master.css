@@ -28,10 +28,6 @@ body {
 
 
 
-
-
-
-
 /*TEMPERATURE*/
 
 
@@ -62,12 +58,6 @@ body {
 
 
 
-
-
-
-
-
-
 /*MIN TEMPERATURE*/
 
 
@@ -80,17 +70,10 @@ body {
 
 
 #min_temp{
+  margin: 0 auto;
   text-decoration: none;
   color: blue;
 }
-
-
-
-
-
-
-
-
 
 
 
