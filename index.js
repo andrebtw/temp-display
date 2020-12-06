@@ -1,10 +1,12 @@
 var fs = require('fs');
 var temps_historic = require('./temps_historic.json');
 
+var jsonstr = '"temps":[{"temp_number":1,"temp":20}]'
 
 /*DISPLAYING ACTUAL TEMP*/
 
-var i = 0;                  //  set your counter to 1
+var i = 0;
+var temp_times=0                //  set your counter to 1
 
 function actual_temp() {         //  create a loop function
   setTimeout(function() {   //  call a 3s setTimeout when the loop is called
@@ -12,15 +14,15 @@ function actual_temp() {         //  create a loop function
         var temps = fs.readFileSync('temps.txt', 'utf8');
         console.log(temps);
         document.getElementById("actual_temp").innerHTML = temps;
-        var jsonstr = '"temps":[]'
         var obj = JSON.parse(jsonstr);
-        obj['temps'].push(temps);
+        obj['temps'].push({"temp_number":temp_times,"temp":temps});
         var json = JSON.stringify(obj);
         fs.writeFileSync('temps_historic.json', json);
     } catch(e) {
         console.log('Error:', e.stack);
     }
-    i++;                    //  increment the counter
+    i++;
+    temp_times++;                    //  increment the counter
     if (i < 99999999999999999999) {           //  if the counter < 10, call the loop function
       actual_temp();             //  ..  again which will trigger another
     }                       //  ..  setTimeout()
