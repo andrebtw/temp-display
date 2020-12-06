@@ -1,5 +1,5 @@
 var fs = require('fs');
-var temps_historic = require('./temps_historic.json');
+//var temps_historic = require('./temps_historic.json');
 let temps_var = [];
 
 /*DISPLAYING ACTUAL TEMP*/
