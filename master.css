@@ -23,3 +23,15 @@ body {
   text-decoration: none;
   color: blue;
 }
+
+
+
+.min_max{
+  text-align: right;
+}
+
+
+#min_max{
+  text-decoration: none;
+  color: blue;
+}
