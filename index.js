@@ -34,6 +34,10 @@ var x = 0;                  //  set your counter to 1
 function min_temp() {         //  create a loop function
   setTimeout(function() {   //  call a 3s setTimeout when the loop is called
     try {
+        Array.min = function( array ){
+        return Math.min.apply( Math, array );
+        };
+        var min_temp = Array.min(array);
         console.log(min_temp);
         document.getElementById("min_temp").innerHTML = min_temp;
     } catch(e) {
