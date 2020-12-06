@@ -1,5 +1,5 @@
 var fs = require('fs');
-
+var temps_historic = require('./temps_historic.json');
 
 
 /*DISPLAYING ACTUAL TEMP*/
@@ -37,7 +37,7 @@ function min_temp() {         //  create a loop function
         Array.min = function(temps_historic){
         return Math.min.apply( Math, temps_historic);
         };
-        var min_temp = Array.min(array);
+        var min_temp = Array.min(temps_historic);
         console.log(min_temp);
         document.getElementById("min_temp").innerHTML = min_temp;
     } catch(e) {
