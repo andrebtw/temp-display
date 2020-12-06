@@ -2,16 +2,13 @@
 
 @font-face {
  font-family: "CaviarDreams";
- src: url("CaviarDreams.ttf") format("ttf");
+ src: url("CaviarDreams.ttf");
 }
 
 @font-face {
  font-family: "TheBoldFont";
- src: url("theboldfont.ttf") format("ttf");
+ src: url("theboldfont.ttf");
 }
-
-
-
 
 
 body {
@@ -26,10 +23,19 @@ body {
   text-align: center;
 }
 
+
+#TEMPERATURE {
+  font-family: "TheBoldFont";
+  color: white;
+}
+
+
 #actual_temp {
+  font-family: "CaviarDreams";
   text-decoration: none;
   color: white;
 }
+
 
 
 .min_temp{
