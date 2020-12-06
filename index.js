@@ -32,6 +32,28 @@ function min_temp() {         //  create a loop function
 /*DISPLAYING MAX TEMP*/
 
 
+var z = 0;                  //  set your counter to 1
+
+function max_temp() {         //  create a loop function
+  setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+    try {
+        Array.max = function(temps_var){
+        return Math.max.apply( Math, temps_var);
+        };
+        var max_temp = Array.max(temps_var);
+        console.log(max_temp);
+        document.getElementById("min_temp").innerHTML = max_temp;
+    } catch(e) {
+        console.log('Error:', e.stack);
+    }
+    x++;                    //  increment the counter
+    if (x < 99999999999999999999) {           //  if the counter < 10, call the loop function
+      actual_temp();             //  ..  again which will trigger another
+    }                       //  ..  setTimeout()
+  }, 1000)
+}
+
+
 
 
 /*DISPLAYING ACTUAL TEMP*/
@@ -56,6 +78,7 @@ function actual_temp() {         //  create a loop function
         //fs.writeFileSync('temps_historic.json', json); //writes
         console.log(temps_var);
         min_temp();
+        max_temp();
     } catch(e) {
         console.log('Error:', e.stack);
     }
