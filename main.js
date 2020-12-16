@@ -27,3 +27,26 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+
+
+
+
+
+
+
+
+//***//
+const globalShortcut = electron.globalShortcut
+//***//
+function createWindow () {
+	//***//
+	globalShortcut.register('f5', function() {
+		console.log('f5 is pressed')
+		mainWindow.reload()
+	})
+	globalShortcut.register('CommandOrControl+R', function() {
+		console.log('CommandOrControl+R is pressed')
+		mainWindow.reload()
+	})
+}

@@ -13,6 +13,7 @@
 
 /*MAIN PAGE*/
 body {
+  position: relative;
   margin:0px;
   background-color: black;
 }
@@ -23,20 +24,9 @@ body {
 /*TEMPERATURE*/
 
 
-.actual_temp{
-  padding-top: 0px;
-  text-align: center;
-}
-
-
-#TEMPERATURE {
-  font-size: 150px;
-  font-family: "TheBoldFont";
-  color: white;
-}
-
-
 #actual_temp {
+  margin: auto;
+  text-align:center;
   font-size: 150px;
   font-family: "CaviarDreams";
   text-decoration: none;
