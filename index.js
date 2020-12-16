@@ -41,8 +41,6 @@ function max_temp() {         //  create a loop function
 }
 
 
-
-
 /*DISPLAYING ACTUAL TEMP*/
 
 var i = 0;                  //  set  counter to 1

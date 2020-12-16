@@ -39,6 +39,16 @@ body {
 
 
 
+/*TEMPERATURE*/
+
+
+#actual_temp {
+  display: fixed;
+  vertical-align: middle;
+  text-align:center;
+  font-size: 150px;
+
+
 
 
 
