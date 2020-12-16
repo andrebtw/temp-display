@@ -15,7 +15,7 @@ function min_temp() {         //  create a loop function
         };
         var min_temp = Array.min(temps_var);
         console.log(min_temp);
-        document.getElementById("min_temp").innerHTML = min_temp.slice(0,4)+"°C";
+        document.getElementById("min_temp").innerHTML = min_temp.toString().slice(0,4)+"°C";
     } catch(e) {
         console.log('Error:', e.stack);
     }                     //  ..  setTimeout()
@@ -34,7 +34,7 @@ function max_temp() {         //  create a loop function
         };
         var max_temp = Array.max(temps_var);
         console.log(max_temp);
-        document.getElementById("max_temp").innerHTML = max_temp.slice(0,4)+"°C";
+        document.getElementById("max_temp").innerHTML = max_temp.toString().slice(0,4)+"°C";
     } catch(e) {
         console.log('Error:', e.stack);
     }                   //  ..  setTimeout()
@@ -53,7 +53,7 @@ function actual_temp() {         //  create a loop function
         var temps = fs.readFileSync('temps.txt', 'utf8'); //reads the temps file which is updated every second by a python script
         console.log(temps); //print the txt file
 
-        document.getElementById("actual_temp").innerHTML = temps.slice(0,4)+"°C"; //put it in the html
+        document.getElementById("actual_temp").innerHTML = temps.toString().slice(0,4)+"°C"; //put it in the html
         temps_var.push(temps); //writes the temps variable which is a number in the json variable
         console.log(temps_var);
         min_temp();
