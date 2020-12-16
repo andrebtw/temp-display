@@ -41,28 +41,29 @@ function max_temp() {         //  create a loop function
 }
 
 
+
+
 /*DISPLAYING ACTUAL TEMP*/
 
-var i = 0;                  //  set  counter to 1
+var i = 0;
 
-function actual_temp() {         //  create a loop function
-  setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+function actual_temp() {
+  setTimeout(function() {
     try {
-        var temps = fs.readFileSync('temps.txt', 'utf8'); //reads the temps file which is updated every second by a python script
-        console.log(temps); //print the txt file
-
-        document.getElementById("actual_temp").innerHTML = temps.toString().slice(0,4)+"°C"; //put it in the html
-        temps_var.push(temps); //writes the temps variable which is a number in the json variable
+        var temps = fs.readFileSync('temps.txt', 'utf8');
+        console.log(temps);
+        document.getElementById("actual_temp").innerHTML = temps.toString().slice(0,4)+"°C";
+        temps_var.push(temps);
         console.log(temps_var);
         min_temp();
         max_temp();
     } catch(e) {
         console.log('Error:', e.stack);
     }
-    i++;                    //  increment the counter
-    if (i < 99999999999999999999) {           //  if the counter < 10, call the loop function
-      actual_temp();             //  ..  again which will trigger another
-    }                       //  ..  setTimeout()
+    i++;
+    if (i < 99999999999999999999) {
+      actual_temp();
+    }
   }, 2500)
 }
-actual_temp();                   //  start the loop
+actual_temp();
