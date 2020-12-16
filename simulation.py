@@ -3,7 +3,7 @@ import time
 
 
 while True:
-    temp=random.random(0.2,0.3)
+    temp=random.uniform(20.00,25.00)
     f = open("temps.txt", "w")
     f.write(f"{temp}")
     f.close()
