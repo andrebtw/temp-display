@@ -1,4 +1,6 @@
 const { app, BrowserWindow, Menu } = require('electron')
+const electron = require('electron')
+const globalShortcut = electron.globalShortcut
 Menu.setApplicationMenu(false)
 
 function createWindow () {
@@ -12,6 +14,16 @@ function createWindow () {
 
   win.loadFile('index.html')
   win.webContents.openDevTools()
+
+
+  globalShortcut.register('f5', function() {
+		console.log('f5 is pressed')
+		win.reload()
+	})
+	globalShortcut.register('CommandOrControl+R', function() {
+		console.log('CommandOrControl+R is pressed')
+		win.reload()
+	})
 }
 
 app.whenReady().then(createWindow)
@@ -27,26 +39,3 @@ app.on('activate', () => {
     createWindow()
   }
 })
-
-
-
-
-
-
-
-
-
-//***//
-const globalShortcut = electron.globalShortcut
-//***//
-function createWindow () {
-	//***//
-	globalShortcut.register('f5', function() {
-		console.log('f5 is pressed')
-		mainWindow.reload()
-	})
-	globalShortcut.register('CommandOrControl+R', function() {
-		console.log('CommandOrControl+R is pressed')
-		mainWindow.reload()
-	})
-}
