@@ -25,12 +25,14 @@ body {
 
 
 #actual_temp {
-  margin: auto;
+  display: fixed;
+  vertical-align: middle;
   text-align:center;
   font-size: 150px;
   font-family: "CaviarDreams";
   text-decoration: none;
   color: white;
+  line-height: normal;
 }
 
 
@@ -51,9 +53,16 @@ body {
 }
 
 
+
+
+
 #min_temp{
+  font-size: 50px;
+  left:0px;
+  bottom: 0px;
+  position: fixed;
   font-family: "TheBoldFont";
-  margin: 0 auto;
+  margin: 0px;
   text-decoration: none;
   color: blue;
 }
@@ -70,6 +79,11 @@ body {
 
 
 #max_temp{
+  font-size: 50px;
+  margin: 0px;
+  right:0px;
+  bottom: 0px;
+  position: fixed;
   font-family: "TheBoldFont";
   text-decoration: none;
   color: red;
