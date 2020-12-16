@@ -3,7 +3,7 @@ import time
 
 
 while True:
-    temp=random.randint(20,25)
+    temp=random.random(0.2,0.3)
     f = open("temps.txt", "w")
     f.write(f"{temp}")
     f.close()
