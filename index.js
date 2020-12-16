@@ -52,7 +52,8 @@ function actual_temp() {         //  create a loop function
     try {
         var temps = fs.readFileSync('temps.txt', 'utf8'); //reads the temps file which is updated every second by a python script
         console.log(temps); //print the txt file
-        document.getElementById("actual_temp").innerHTML = temps+"°C"; //put it in the html
+
+        document.getElementById("actual_temp").innerHTML = temps.slice(0,3)+"°C"; //put it in the html
         temps_var.push(temps); //writes the temps variable which is a number in the json variable
         console.log(temps_var);
         min_temp();
